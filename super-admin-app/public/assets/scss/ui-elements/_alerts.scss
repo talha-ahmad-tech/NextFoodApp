@@ -1,0 +1,40 @@
+%bubble-message {
+  /* @include card-shadow; */
+  @include border-radius(5px);
+  @include padding(10px, 10px, 10px, 10px);
+  @include margin(0, 0, 0, 0);
+  @include flex-center-vert;
+
+  svg {
+    @include margin(0, 10px, 0, 0);
+  }
+  p{
+    @include font-size(12px);
+  }
+  a {
+    color: $white-color;
+    @include font-size(12px);
+    text-decoration: underline;
+    &:hover{
+      color: $white-color;
+    }
+  }
+}
+.bubble-message-white {
+  background: $white-color;
+  @extend %bubble-message;
+}
+.bubble-message-success {
+  background: green;
+  @extend %bubble-message;
+  color: $white-color;
+}
+.bubble-message-error {
+  background: $delete-color;
+  @extend %bubble-message;
+  color: $white-color;
+}
+.bubble-message-info {
+  background: yellow;
+  @extend %bubble-message;
+}

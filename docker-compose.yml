@@ -1,0 +1,12 @@
+version: "3"
+services:
+  consoleui:
+    volumes:
+      - ./.env:/app/.env
+    build:
+      dockerfile: ./DockerFiles/console.Dockerfile
+      context: ./
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: 3000

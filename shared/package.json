@@ -1,0 +1,33 @@
+{
+  "name": "@fridayfood/shared",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./index.tsx",
+  "dependencies": {
+    "@fridayfood/ui-toolkit": "0.1.0",
+    "@fridayfood/shared": "0.1.0"
+
+  },
+  "scripts": {},
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react-portal-tooltip": "^2.4.2"
+  }
+}

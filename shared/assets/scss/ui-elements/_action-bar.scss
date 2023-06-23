@@ -1,0 +1,25 @@
+.friday-action-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+  height: 60px;
+  border-top: solid 1px $border-color;
+  background: $white-color;
+  left: 0;
+  @include flex-center-vert;
+  @include padding(0, 0, 0, 0);
+
+  @include breakpoint(ipadLandscape) {
+    height: 45px;
+  }
+
+  .friday-action-bar-content {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.friday-action-bar-content .friday-btn:not(:first-child) {
+  @include margin(0, 0, 0, 10px);
+}

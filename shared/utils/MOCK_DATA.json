@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "client_name": "Carmelina",
+    "project_name": "Brainverse",
+    "no_vendors": 1,
+    "project_manager": "Carmelina Guiett"
+  },
+  {
+    "id": 2,
+    "client_name": "Alina",
+    "project_name": "Blogtags",
+    "no_vendors": 2,
+    "project_manager": "Alina Threadgill"
+  },
+  {
+    "id": 3,
+    "client_name": "Merl",
+    "project_name": "Meevee",
+    "no_vendors": 3,
+    "project_manager": "Merl Temprell"
+  }
+]

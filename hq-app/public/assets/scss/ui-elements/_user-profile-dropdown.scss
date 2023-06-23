@@ -1,0 +1,70 @@
+@import "../mixins", "../layout", "../reset", "../variables";
+.custom-dropdown-container-wrapper {
+  position: relative;
+  @include padding(45px, 7px, 45px, 0);
+  // @include margin(0,5px,0,5px);
+  @include breakpoint(lp) {
+    @include padding(40px, 7px, 40px, 0);
+  }
+  @include breakpoint(ipadLandscape) {
+    @include padding(28px, 7px, 28px, 0);
+  }
+  background-color: $white-color;
+  @include position(sticky);
+  top: 0;
+  .custom-dropdown-head-right{
+    padding-right: 10px;
+  }
+  .custom-dropdown-container {
+    @include position(relative);
+    .custom-dropdown-button {
+      @include flex-between();
+      @include width(100%);
+      @include padding(0, 0, 0, 0);
+      @include position(relative);
+      z-index: 3;
+      transition: all 250ms ease 0s;
+      .custom-dropdown-head-left {
+        @include flex-center-vert();
+        .profile-image{
+          min-width: 60px;
+          max-width: 60px;
+          text-align: center;
+        }
+        p {
+          overflow: hidden;
+          text-align: left;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+    .custom-dropdown-body {
+      @include display(none);
+      @include border-radius(12px);
+      @include width(100%);
+      @include custom-fixed-position(absolute, -10px, unset, 5px, 5px);
+      @include border-radius(12px);
+      @include padding(60px, 5px, 0, 5px);
+      @include background($white-color);
+      @include min-height(183px);
+      box-shadow: 0 3px 13px rgba(101, 140, 197, 0.3);
+      z-index: 2;
+    }
+  }
+  &.active {
+    @include background($white-color);
+    .custom-dropdown-button {
+      span {
+        i {
+          &::before {
+            content: "\f106";
+          }
+        }
+      }
+    }
+    .custom-dropdown-body {
+      @include flex-column();
+    }
+  }
+}

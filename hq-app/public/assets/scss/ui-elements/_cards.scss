@@ -1,0 +1,98 @@
+@mixin card-shadow-1() {
+  @include box-shadow(0px, 0px, 5px, rgba(101, 140, 197, 0.2));
+}
+@mixin card-shadow-2() {
+  @include box-shadow(0, 3px, 8px, black(0.1));
+  border: 1px solid #dee2e6;
+}
+
+@mixin card-shadow-3() {
+  border: 1px solid #dee2e6;
+}
+
+@mixin card-hover() {
+  @include box-shadow(0, 5px, 24px, black(0.2));
+  @include transform(translateY(-5px));
+}
+
+.friday-card {
+  background: $white-color;
+  margin-bottom: 0;
+  .friday-card-header {
+    border-bottom: 1px solid $border-color;
+    @include padding(14px, 32px, 14px, 32px);
+    @include flex-center-vert;
+    justify-content: space-between;
+    @include breakpoint(md) {
+      @include padding(10px, 15px, 10px, 15px);
+    }
+
+    @include breakpoint(sm) {
+      @include padding(10px, 15px, 10px, 15px);
+    }
+  }
+
+  .friday-card-body {
+    @include padding(14px, 32px, 14px, 32px);
+    min-height: calc(100vh - 350px);
+    &.auto-height {
+      min-height: auto !important;
+    }
+    &.max-height {
+      max-height: calc(100vh - 350px);
+      overflow-y: scroll;
+    }
+  }
+
+  &.card-shadow-1 {
+    @include card-shadow-1;
+  }
+  &.card-shadow-2 {
+    @include card-shadow-2;
+  }
+  &.card-shadow-3 {
+    @include card-shadow-3;
+  }
+  &.card-no-shadow {
+    box-shadow: none;
+  }
+
+  &.card-no-padding {
+    @include padding(0, 0, 0, 0);
+  }
+  &.card-padding-1 {
+    @include padding(1rem, 1rem, 1rem, 1rem);
+  }
+  &.card-padding-2 {
+    @include padding(2rem, 2rem, 2rem, 2rem);
+  }
+  &.card-padding-3 {
+    @include padding(3rem, 3rem, 3rem, 3rem);
+  }
+}
+.custom-large-card {
+  .tab-pane {
+    &.fade {
+      .friday-card-body {
+        min-height: calc(100vh - 300px) !important;
+      }
+    }
+  }
+}
+.friday-card-title {
+  font-family: $font-tertiary;
+  @include font-size(20px);
+  text-transform: capitalize;
+  @include breakpoint(lp) {
+    @include font-size(16px);
+  }
+  @include breakpoint(ipadLandscape) {
+    @include font-size(13px);
+  }
+  @include breakpoint(md) {
+    @include font-size(13px);
+  }
+  @include breakpoint(sm) {
+    @include font-size(13px);
+  }
+}

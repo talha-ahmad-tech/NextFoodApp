@@ -1,0 +1,35 @@
+@import "../../assets/style.scss";
+
+.custom-flex-start {
+  position: relative;
+  .custom-dropdown-wrapper-cards {
+    .customdropdownwrapper {
+      @include custom-fixed-position(absolute, 0, unset, unset, 0);
+      @include flex-center();
+      opacity: 0;
+      .customdropdownbutton {
+        padding: 0 !important;
+        border: none !important;
+        cursor: pointer !important;
+        button {
+
+          @include width(32px);
+          @include height(37px);
+          text-align: center;
+          border: none !important;
+          border-radius: 0;
+          border-top-right-radius: 10px;
+          border-bottom-left-radius: 10px;
+          box-shadow: none !important;
+          outline: none !important;
+          &:hover {
+            border: none !important;
+          }
+        }
+        // svg {
+        //   opacity: 0.5;
+        // }
+      }
+    }
+  }
+}

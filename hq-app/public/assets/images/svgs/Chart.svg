@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="115.473" height="115.473" viewBox="0 0 115.473 115.473">
+          <g id="Group_10914" data-name="Group 10914" transform="translate(9.896 9.896)">
+            <g id="Group_10721" data-name="Group 10721">
+              <g id="Group_10716" data-name="Group 10716" transform="matrix(-0.225, -0.974, 0.974, -0.225, 22.481, 88.426)">
+                <ellipse id="Ellipse_754" data-name="Ellipse 754" cx="33.84" cy="33.84" rx="33.84" ry="33.84" transform="translate(0 0)" fill="none" stroke="#0b77e3" stroke-dashoffset="235.755" stroke-width="14" stroke-dasharray="374.991"/>
+              </g>
+              <g id="Group_10717" data-name="Group 10717" transform="matrix(0.848, 0.53, -0.53, 0.848, 37.076, 1.21)">
+                <ellipse id="Ellipse_755" data-name="Ellipse 755" cx="33.84" cy="33.84" rx="33.84" ry="33.84" fill="none" stroke="#ff9f40" stroke-dashoffset="293.336" stroke-width="14" stroke-dasharray="374.991"/>
+              </g>
+              <g id="Group_10718" data-name="Group 10718" transform="translate(91.893 29.142) rotate(112)">
+                <ellipse id="Ellipse_756" data-name="Ellipse 756" cx="33.84" cy="33.839" rx="33.84" ry="33.839" transform="translate(0 0)" fill="none" stroke="#ff6384" stroke-dashoffset="314.521" stroke-width="14" stroke-dasharray="374.991"/>
+              </g>
+              <g id="Group_10719" data-name="Group 10719" transform="matrix(-0.998, 0.07, -0.07, -0.998, 86.681, 81.604)">
+                <ellipse id="Ellipse_757" data-name="Ellipse 757" cx="33.839" cy="33.84" rx="33.839" ry="33.84" transform="translate(0 5.31) rotate(-4.5)" fill="none" stroke="#ffb1c1" stroke-dashoffset="322.67" stroke-width="14" stroke-dasharray="374.991"/>
+              </g>
+              <g id="Group_10720" data-name="Group 10720" transform="matrix(-0.725, -0.688, 0.688, -0.725, 49.093, 95.681)">
+                <path id="Path_65561" data-name="Path 65561" d="M33.84,0A33.84,33.84,0,1,1,0,33.84,33.841,33.841,0,0,1,33.84,0Z" transform="translate(0 0)" fill="none" stroke="#c9c9c9" stroke-dashoffset="341.682" stroke-width="14" stroke-dasharray="374.991"/>
+              </g>
+            </g>
+            <text id="_226" data-name="226" transform="translate(32.825 52.999)" fill="#24282c" font-size="15" font-family="SFProDisplay-Bold, SF Pro Display" font-weight="700"><tspan x="0" y="0">226</tspan></text>
+          </g>
+        </svg>

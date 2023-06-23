@@ -1,0 +1,50 @@
+import GeneralListing from '@fridayfood/shared/components/GeneralListing';
+import { columnDefs } from './config';
+import { useRouter } from 'next/router';
+import { useLazyFetch{{titleCase name}}Query } from 'services/modules/{{camelCase name}}.api';
+
+import type {
+  GridReadyEvent,
+  RowSelectedEvent,
+  IGetRowsParams,
+} from 'ag-grid-community';
+
+const {{titleCase name}} = () => {
+  const router = useRouter();
+
+  const [fetch{{titleCase name}}] = useLazyFetch{{titleCase name}}Query();
+    const datasource = (props: GridReadyEvent) => {
+    return {
+      async getRows(params: IGetRowsParams) {
+        const { data ,isSuccess} = await fetch{{titleCase name}}(params);
+        if (data?.result?.length||isSuccess) {
+          props.api.hideOverlay();
+        }
+        params.successCallback(data?.result, data?.result?.length?data?.result?.length:0);
+      },
+    };
+  };
+
+  const onRowSelect = (event: RowSelectedEvent) => {
+    const { id = 0 } = event.data;
+    router.push(`/{{camelCase name}}/${id}`);
+  };
+
+  const onGridReady = (params: GridReadyEvent) => {
+    params.api.setDatasource(datasource(params));
+    params.api.showLoadingOverlay();
+  };
+
+  return (
+    <GeneralListing
+      columnDefs={columnDefs}
+      onGridReady={onGridReady}
+      onRowSelect={onRowSelect}
+      title="All {{titleCase name}}"
+      btnTitle={'Add {{titleCase name}}'}
+      onBtnClick={() => router.push('/{{camelCase name}}/add')}
+    />
+  );
+};
+
+export default {{titleCase name}};

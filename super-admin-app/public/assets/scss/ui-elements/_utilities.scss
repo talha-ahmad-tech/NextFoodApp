@@ -1,0 +1,36 @@
+.no-border-radius {
+  @include border-radius(0);
+}
+.border-radius-4 {
+  @include border-radius(4px);
+}
+.border-radius-5 {
+  @include border-radius(5px);
+}
+
+.border-radius-8 {
+  @include border-radius(8px);
+}
+
+.border-radius-10 {
+  @include border-radius(10px);
+}
+.border-radius-15 {
+  @include border-radius(15px);
+}
+
+.no-border {
+  border: 0 !important;
+}
+.text-color-white {
+  color: $white-color;
+}
+.text-color-primary {
+  color: $brand-color;
+}
+.text-color-light-grey {
+  color: $light-grey-color;
+}
+.text-color-dark-grey {
+  color: $dark-grey-color;
+}

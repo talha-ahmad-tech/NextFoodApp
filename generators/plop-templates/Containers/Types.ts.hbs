@@ -1,0 +1,38 @@
+export type ADD_{{constantCase name}} = {
+  code?: string;
+  {{camelCase name}}Name?: string;
+  itemGroupId?: string;
+  itemGroupName?: string;
+  activeFrom?: string;
+  activeTo?: string;
+  standardCost?: string;
+  totalRetailPrice?: string;
+  purchaseTaxGroupId?: string | number;
+  saleTaxGroupId?: string;
+  {{camelCase name}}Details?: string;
+};
+
+export type ADD_UPDATE_{{constantCase name}} = {
+  code?: string;
+  id?: string;
+  {{camelCase name}}Details?: {{constantCase name}}_DETAILS;
+};
+
+export type {{constantCase name}}_DETAILS = {
+  code?: string;
+  {{camelCase name}}Name?: string;
+  itemGroupId?: string;
+  itemGroupName?: string;
+  status?: 0 | 1;
+  approvalStatus?: 0 | 1;
+  activeFrom?: string;
+  activeTo?: string;
+  standardCost?: string;
+  totalRetailPrice?: string;
+  purchaseTaxGroupId?: string;
+  purchaseTaxGroupName?: string;
+  saleTaxGroupId?: string;
+  saleTaxGroupName?: string;
+  {{camelCase name}}Details?: Array<ADD_{{constantCase name}}>;
+  id?: string;
+};

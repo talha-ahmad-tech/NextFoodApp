@@ -1,0 +1,14 @@
+@import '../../assets/style.scss';
+
+$button-z: 0;
+$button-highlight: 1;
+$button-selection: 2;
+
+.custom-header-wrapper {
+  min-height: 45px;
+}
+.custom-icon-wrapper {
+  svg {
+    margin-right: 5px;
+  }
+}

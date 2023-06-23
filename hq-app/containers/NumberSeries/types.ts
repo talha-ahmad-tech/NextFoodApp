@@ -1,0 +1,82 @@
+export type ADD_NUMBER_SERIES = {
+  name?: string;
+  description?: string;
+  transactionType?: string;
+  orderSource?: string;
+  resetSequence?: string;
+  duration?: string;
+  prefix?: string;
+  suffix?: string;
+};
+
+export type ADD_UPDATE_NUMBER_SERIES = {
+  name: string;
+  description: string;
+  transactionType: string;
+  orderSource: string;
+  resetSequence: string;
+  duration: string;
+  prefix: string;
+  suffix: string;
+  id?: string;
+  numberSeriesDetails?: NUMBER_SERIES_DETAILS;
+
+  isOverwrite?: boolean;
+  form?: string | number;
+  module?: string;
+  type?: string;
+  numberSeriesId?: string;
+  companyId?: string;
+  companyCode?: string;
+  numbe?: string;
+  format?: string;
+  min?: string;
+  max?: string;
+  next?: string;
+  manual?: string;
+  continuous?: string;
+  modifiedByName?: string;
+  isDefault?: string;
+  isDefaultValue?: string;
+  Module?: string;
+  minNumber?: number;
+  maxNumber?: number;
+  prefixText?: string;
+  suffixText?: string;
+};
+
+export type NUMBER_SERIES_DETAILS = {
+  code?: string;
+  name?: string;
+  numberSeriesDetails?: Array<ADD_NUMBER_SERIES>;
+  id?: string;
+  isOverwrite?: boolean;
+  form?: string | number;
+  module?: string;
+  type?: string;
+  numberSeriesId?: string;
+  companyId?: string;
+  companyCode?: string;
+  prefix?: string;
+  numbe?: string;
+  suffix?: string;
+  format?: string;
+  min?: string;
+  max?: string;
+  next?: string;
+  manual?: string;
+  continuous?: string;
+  modifiedByName?: string;
+  isDefault?: string;
+  isDefaultValue?: string;
+  Module?: string;
+  minNumber?: number;
+  maxNumber?: number;
+  prefixText?: string;
+  suffixText?: string;
+};
+export type FORM_OPTIONS = {
+  name: string;
+  value: number;
+  id: number;
+};

@@ -1,0 +1,36 @@
+@import '../../assets/scss/_layout.scss', '../../assets/scss/_variables.scss',
+  '../../assets/scss/_mixins.scss';
+.custom-bottom-padding {
+  padding-top: 80px;
+}
+.form-footer-actions {
+  background-color: $white-color;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+
+  @include padding(10px, 0, 10px, 0);
+
+  @include box-shadow(0px, -3px, 6px, $box-shadow-clr);
+  .custom-btn-secondary {
+    margin-right: 20px;
+    &:hover {
+      background-color: $secondary-hover-color;
+    }
+  }
+  .custom-btn-primary {
+    &:hover {
+      background: $brand-hover-color;
+      cursor: pointer;
+    }
+  }
+  .custom-footer-links {
+    @include flex-end();
+  }
+}
+
+.border-round {
+  border-radius: 5px !important;
+}

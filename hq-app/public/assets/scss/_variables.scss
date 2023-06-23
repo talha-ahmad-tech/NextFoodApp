@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'sfpro';
+  src: local('sfpro'), url(../fonts/SF-Pro.woff) format('woff');
+}
+@font-face {
+  font-family: 'sfpro medium';
+  src: local('sfpro medium'),
+    url(../fonts/SF-Pro-Display-Medium.woff) format('woff');
+}
+@font-face {
+  font-family: 'sfpro bold';
+  src: local('sfpro bold'),
+    url(../fonts/SF-Pro-Display-Bold.woff) format('woff');
+}
+// colors
+$brand-color: #0b77e3;
+$brand-hover-color: #0c65c5;
+$brand-active-color: #0257b1;
+
+$secondary-color: #dddfe0;
+$secondary-hover-color: #e5e5e5;
+$secondary-active-color: #f3f3f3;
+
+$delete-color: #de2e21;
+$delete-hover-color: #b82015;
+$delete-active-color: #e2453a;
+
+$green-clr: #05c06f;
+
+$brand-second-color: #ef5a2c;
+
+$black-color: #24282c; // black color
+$light-black-color: #383c40;
+$white-color: #fff; // white color
+
+$light-grey-color: rgba($black-color, 0.5);
+$border-grey-color: #bcbcbc;
+
+$dark-grey-color: #494949;
+$second-grey-color: #2a2a2a;
+$third-grey-color: #606060;
+$fourth-grey-color: #7b858f;
+$new-dark-grey-color: #a0a4a7;
+
+/* $text-grey-color: rgba($black-color, 0.5); */
+$hover-color: rgb(232, 235, 237);
+$border-color: rgba($black-color, 0.1);
+$box-shadow-clr: #00000029;
+
+$table-light-grey-color: #f9fafc;
+$table-header-color: #f2f5f7;
+
+// Body Background Clr
+$grey-clr: #f2f5f7;
+$dark-grey-new-clr: #ecf0f1;
+$blue-scondary-clr: #e5f1fb;
+$icons-button-clr: #aac0de;
+$red-color: #ff4040;
+$brand-light-clr: #6883ab;
+$new-grey-clr: #777777;
+$new-button-grey-clr: #f7f7ff;
+$dark-grey-clr: #707070;
+$orange-clr: #fa720e;
+
+// $box-shadow-clr:rgba(101,140,197,0.2);
+// fonts
+$font-primary: 'sfpro';
+$font-secondary: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-tertiary: 'sfpro medium';
+$sf-pro-bold: 'sfpro bold';
+$sf-pro-semibold: 'sfpro semibold';

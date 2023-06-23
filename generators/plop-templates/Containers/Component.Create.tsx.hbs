@@ -1,0 +1,14 @@
+import ListHeaderWrapper from '@fridayfood/shared/components/ListHeaderWrapper';
+import { ADD_UPDATE_{{constantCase name}} } from '../types';
+import FormFormEnhancer from './FormEnhancer';
+
+const {{titleCase name}}Form = (props: ADD_UPDATE_{{constantCase name}}) => {
+  return (
+    <div className="ag-theme-alpine">
+      <ListHeaderWrapper title="Create {{camelCase name}}" />
+      <FormFormEnhancer {...props} />
+    </div>
+  );
+};
+
+export default {{titleCase name}}Form;

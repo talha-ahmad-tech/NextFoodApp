@@ -1,0 +1,73 @@
+import { useEffect, useState } from 'react';
+import TabsHeader from '@fridayfood/shared/components/TabsDetail/TabsHeader';
+import FormFooterActions from '@fridayfood/shared/components/FromFooterAction';
+import { RenderStepContent } from './Steps';
+import {
+  formInitialValues,
+  validationSchema,
+} from './FormConfig/validationSchema';
+import { tabsConfiguration } from '../config';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { ADD_{{constantCase name}}, ADD_UPDATE_{{constantCase name}} } from '../types';
+const steps = ['General', '{{camelCase name}}Order'];
+
+const FormFormEnhancer = ({ code, id, {{camelCase name}}Details={} }: ADD_UPDATE_{{constantCase name}}) => {
+  const [activeStep, setActiveStep] = useState(0);
+
+  const isLastStep = activeStep === steps.length - 1;
+  const formProps = useForm<ADD_{{constantCase name}}>({
+    mode: 'onTouched',
+    resolver: yupResolver(validationSchema[activeStep]),
+    defaultValues: formInitialValues,
+  });
+
+  useEffect(() => {
+    if (id === undefined) {
+      formProps.setValue('code', code);
+    } else {
+      formProps.setValue('code', {{camelCase name}}Details.code);
+      formProps.setValue('{{camelCase name}}Name', {{camelCase name}}Details.{{camelCase name}}Name);
+      formProps.setValue('itemGroupId', {{camelCase name}}Details.itemGroupId);
+      formProps.setValue('activeFrom', {{camelCase name}}Details.activeFrom);
+      formProps.setValue('activeTo', {{camelCase name}}Details.activeTo);
+      formProps.setValue('activeTo', {{camelCase name}}Details.activeTo);
+      formProps.setValue('standardCost', {{camelCase name}}Details.standardCost);
+      formProps.setValue('totalRetailPrice', {{camelCase name}}Details.totalRetailPrice);
+      formProps.setValue('purchaseTaxGroupId', {{camelCase name}}Details.purchaseTaxGroupId);
+      formProps.setValue('saleTaxGroupId', {{camelCase name}}Details.saleTaxGroupId);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  function _handleBack() {
+    setActiveStep(activeStep - 1);
+  }
+
+  function _handleSubmit() {
+    {{!-- values: ADD_{{camelCase name}} --}} 
+    setActiveStep(activeStep + 1);
+  }
+
+  return (
+    <div className="friday-vertical-tabs-container">
+      <form onSubmit={formProps.handleSubmit(_handleSubmit)}>
+        <div className="custom-tabs-wrapper custom-flex-start p-0 ">
+          <div className="me-4">
+            <TabsHeader Tabs={tabsConfiguration({})} activeIndex={activeStep} />
+          </div>
+          <div className="friday-card card-shadow-1 border-radius-10 mb-4">
+            <RenderStepContent step={activeStep} formData={formProps} />
+          </div>
+          <FormFooterActions
+            activeStep={activeStep}
+            handleBack={_handleBack}
+            isLastStep={isLastStep}
+          />
+        </div>
+      </form>
+    </div>
+  );
+};
+
+export default FormFormEnhancer;

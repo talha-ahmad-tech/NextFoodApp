@@ -1,0 +1,20 @@
+@import "../../assets/style.scss";
+.nav-link {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+}
+.circle-wrapper {
+  @include width(6px);
+  @include min-width(6px);
+  @include height(6px);
+  border-radius: 50%;
+  background-color: $new-dark-grey-color;
+  display: inline-block;
+  margin-right: 8px;
+}
+.active {
+  .circle-wrapper {
+    background-color: $green-clr;
+  }
+}

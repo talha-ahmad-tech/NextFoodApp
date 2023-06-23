@@ -1,0 +1,157 @@
+@import '../../assets/scss/_layout.scss', '../../assets/scss/_variables.scss',
+  '../../assets/scss/_mixins.scss';
+
+.custom-btn-primary {
+  font-family: $font-tertiary;
+  background-color: $brand-color;
+  color: $white-color;
+  min-width: 72px;
+  text-align: center;
+  border: 1px solid transparent;
+  @include font-size(15px);
+  @include border-radius(30px);
+  @include padding(6px, 12px, 6px, 12px);
+  @include breakpoint(md) {
+    @include font-size(12px);
+    @include padding(6px, 10px, 6px, 10px);
+  }
+  &:hover {
+    background: $brand-hover-color;
+    cursor: pointer;
+  }
+}
+.custom-close-btn {
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border-radius: 50%;
+  transition: 0.3s ease;
+  @include flex-center;
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+  &:hover {
+    background: $secondary-hover-color;
+  }
+}
+.custom-btn-outline {
+  background-color: transparent;
+  color: $brand-color;
+  border: 1px solid $brand-color;
+  min-width: 72px;
+  text-align: center;
+
+  &:hover {
+    background: $brand-hover-color;
+    color: $white-color;
+    cursor: pointer;
+  }
+  &.active {
+    background: $brand-hover-color;
+    color: $white-color;
+  }
+}
+
+.custom-btn {
+  background-color: transparent;
+  color: $black-color;
+  border: 1.5px solid $black-color;
+  border-radius: 20px;
+  padding: 5px;
+  font-weight: bold;
+  min-width: 72px;
+  text-align: center;
+
+  &:hover {
+    background: $black-color;
+    color: $white-color;
+    cursor: pointer;
+  }
+  &.active {
+    background: $black-color;
+    color: $white-color;
+  }
+}
+.custom-icon-button {
+  padding: 0 10px;
+  i {
+    color: $brand-color;
+  }
+}
+
+.custom-link-button {
+  text-align: left;
+  @include font-size(15px);
+  @include padding(14px, 0, 14px, 0);
+  @include border-top(1px, solid, $dark-grey-new-clr);
+  span {
+    @include margin(0, 14px, 0, 0);
+    i {
+      color: $brand-color;
+    }
+  }
+  &:hover {
+    @include background($blue-scondary-clr);
+  }
+}
+
+.custom-button-transparent {
+  text-align: left;
+  align-items: center;
+  @include flex-start();
+  @include font-size(16px);
+  @include padding(6px, 12px, 6px, 12px);
+  @include border-radius(5px);
+  @include width(100%);
+  @include height(56px);
+  font-family: $font-tertiary;
+  span {
+    i {
+      color: $brand-color;
+    }
+    &.text-hidden {
+      @include margin(0, 10px, 0, 0);
+      overflow: hidden;
+      text-align: left;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+  &.active-tab {
+    @include background($blue-scondary-clr);
+  }
+  &:hover {
+    @include background($blue-scondary-clr);
+  }
+}
+
+.custom-round-btn {
+  @include min-width(13px);
+  @include width(13px);
+  @include height(13px);
+  @include border-radius(50%);
+  background-color: $brand-color;
+  @include flex-center();
+  @include width(100%);
+  @include font-weight(600);
+}
+
+.sub-menu-items {
+  text-align: left;
+  @include font-size(15px);
+  @include padding(14px, 12px, 14px, 60px);
+  @include border-radius(5px);
+  @include width(100%);
+  @include font-weight(400);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  &:hover {
+    @include background($blue-scondary-clr);
+  }
+}
+
+.border-round {
+  border-radius: 5px !important;
+}

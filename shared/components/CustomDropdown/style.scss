@@ -1,0 +1,78 @@
+@import "../../assets/style.scss";
+
+.customdropdownwrapper{
+    position: relative;
+    .customdropdownbutton{
+        cursor: pointer !important;
+        button{
+            font-family: $font-primary;
+            @include font-size(13px);
+            i{
+                @include color($brand-light-clr);
+                margin-left: 10px;
+            }
+        }
+    }
+    .customdropdown-body{
+        display: none;
+        @include custom-fixed-position(absolute,0,unset,5%,unset);
+        transform: translateX(-65%);
+        border-radius: 6px;
+        box-shadow: 0 0 6px #DEE2E4;
+        @include background($white-color);
+        @include min-width(100px);
+        z-index: 1;
+       
+        .dropdown-list-wrapper{
+            button{
+                padding: 15px 12px;
+                @include border-bottom(1px,solid,$dark-grey-new-clr);
+                @include flex-center();
+                justify-content: flex-start;
+                @include width(100%);
+                white-space: nowrap;
+                text-align: left;
+                svg{
+                    @include width(15.25px);
+                    @include height(15.25px);
+                    margin-right:18.6px;
+                }
+            }
+        }
+        &::before{
+            content: '';
+            @include custom-fixed-position(absolute,-6.72px,unset,unset,30px);
+            transform: translateX(-50%);
+            width: 17.68px;
+            height:6.72px;
+            @include background($white-color);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            box-shadow: 0 0 6px #dee2e4;
+        }
+       
+    }
+    &.active{
+        .customdropdown-body{
+            display: block;
+            button{
+                &:hover{
+                    color:$brand-color;
+                }
+              }  
+        }
+        .customdropdownbutton{
+          button i{
+            &::before{
+                content: "\f106";
+            }     
+            }
+          
+        }
+        .no-item{
+            path{
+                fill:black;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,13 @@
+@import "../../assets/style.scss";
+.vertical-tabs-wrapper{
+    padding: 0;
+    .custom-tabs-wrapper-header__list{
+        padding: 0 !important;
+    }
+    .custom-tabs-wrapper-header{
+        padding: 0 30px;
+    }
+    .tab-content{
+        padding: 0 30px;   
+    }
+}

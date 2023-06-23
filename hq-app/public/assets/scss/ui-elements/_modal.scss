@@ -1,0 +1,71 @@
+@mixin modal-shadow-1() {
+  @include box-shadow(0, 3px, 8px, black(0.1));
+}
+@mixin modal-shadow-2() {
+  @include box-shadow(0, 3px, 8px, black(0.1));
+  border: 1px solid #dee2e6;
+}
+@mixin modal-shadow-3() {
+  border: 1px solid #dee2e6;
+}
+
+.friday-modal {
+  border: 0;
+  @include border-radius(10px);
+
+  .modal-header {
+    /* border: 0;*/
+    @include padding(10px, 30px, 10px, 30px);
+
+    @include breakpoint(lp){
+      @include padding(10px, 20px, 10px, 20px);
+    }
+    @include breakpoint(ipadLandscape){
+      @include padding(10px, 20px, 10px, 20px);
+    }
+
+    .modal-title {
+      @include font-size(18px);
+      font-weight: 700
+    }
+  }
+
+  .friday-modal-body {
+    @include padding(30px, 30px, 30px, 30px);
+
+    @include breakpoint(lp){
+      @include padding(20px, 20px, 20px, 20px);
+    }
+    @include breakpoint(ipadLandscape){
+      @include padding(10px, 20px, 10px, 20px);
+    }
+
+  }
+  .modal-scroll {
+    height: 450px;
+    overflow-y: auto;
+    @include scrollbars(5px, $brand-color, $border-color);
+  }
+  .modal-footer {
+    @include padding(10px, 10px, 10px, 10px);
+    @include breakpoint(lp){
+      @include padding(5px, 10px, 5px, 10px);
+    }
+    @include breakpoint(ipadLandscape){
+      @include padding(5px, 10px, 5px, 10px);
+    }
+  }
+
+  &.modal-shadow-1 {
+    @include modal-shadow-1;
+  }
+  &.modal-shadow-2 {
+    @include modal-shadow-2;
+  }
+  &.modal-shadow-3 {
+    @include modal-shadow-3;
+  }
+  &.modal-no-shadow {
+    box-shadow: none;
+  }
+}

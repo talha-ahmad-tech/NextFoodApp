@@ -1,0 +1,272 @@
+@mixin dropdown-shadow() {
+  @include box-shadow(0, 8px, 16px, black(0.2));
+}
+
+.friday-dropdown-menu {
+  position: relative;
+  &.dropdown-shadow {
+    @include dropdown-shadow;
+  }
+  &.dropdown-no-shadow {
+    box-shadow: none;
+  }
+  .friday-dropdown-body {
+    @include padding(20px, 20px, 20px, 20px);
+
+    @include breakpoint(ipadLandscape) {
+      @include padding(10px, 10px, 10px, 10px);
+    }
+  }
+
+  &:after {
+    bottom: 100%;
+    right: 3%;
+    border: solid transparent;
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: $white-color;
+    border-width: 8px;
+    margin-left: -8px;
+    top: -16px;
+
+    @include breakpoint(ipadLandscape) {
+      border-width: 5px;
+      margin-left: -5px;
+      top: -10px;
+    }
+  }
+}
+
+.user-dropdown-menu {
+  @include padding(0, 0, 30px, 0);
+  width: 320px;
+  /* position: relative; */
+  right: 0;
+  left: initial !important;
+  top: 42px;
+  border: 0;
+
+  @include breakpoint(lp) {
+    @include padding(0, 0, 20px, 0);
+  }
+
+  @include breakpoint(ipadLandscape) {
+    top: 30px;
+    width: 200px;
+    @include padding(0, 0, 10px, 0);
+  }
+
+  .user-dropdoown-body {
+    @include padding(0, 0, 20px, 0);
+
+    @include breakpoint(lp) {
+      @include padding(0, 0, 10px, 0);
+    }
+
+    @include breakpoint(ipadLandscape) {
+      @include padding(0, 0, 5px, 0);
+    }
+
+    .dropdown-item {
+      border: 2px solid transparent;
+      @include font-size(13px);
+      color: $dark-grey-color;
+      text-transform: capitalize;
+      @include padding(8px, 20px, 8px, 20px);
+
+      @include breakpoint(lp) {
+        @include font-size(12px);
+      }
+
+      @include breakpoint(ipadLandscape) {
+        @include font-size(11px);
+        @include padding(5px, 10px, 5px, 10px);
+      }
+
+      &:active {
+        border: 2px solid $brand-color;
+        background: none;
+      }
+      &:focus {
+        background: none;
+      }
+    }
+  }
+
+  .user-info {
+    color: $dark-grey-color;
+    border-bottom: 1px solid $border-color;
+    @include padding(20px, 15px, 20px, 15px);
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(ipadLandscape) {
+      @include padding(10px, 10px, 10px, 10px);
+    }
+
+    &__figure-holder {
+      @include margin(0, 10px, 0, 0);
+      @include border-radius(50%);
+      img {
+        width: 45px;
+        height: 45px;
+        @include border-radius(50%);
+
+        @include breakpoint(lp) {
+          width: 35px;
+          height: 35px;
+        }
+
+        @include breakpoint(ipadLandscape) {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+    &__name {
+      font-weight: 500;
+      @include font-size(15px);
+      display: block;
+      text-transform: capitalize;
+
+      @include breakpoint(lp) {
+        @include font-size(13px);
+      }
+
+      @include breakpoint(ipadLandscape) {
+        @include font-size(12px);
+      }
+    }
+    &__link {
+      font-weight: 400;
+      @include font-size(13px);
+
+      @include breakpoint(lp) {
+        @include font-size(12px);
+      }
+
+      @include breakpoint(ipadLandscape) {
+        @include font-size(11px);
+      }
+    }
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+}
+
+@include breakpoint(sm) {
+  .navbar-nav {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .navbar-collapse {
+    flex-basis: auto;
+  }
+  .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+}
+
+@include breakpoint(md) {
+  .navbar-nav {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .navbar-collapse {
+    flex-basis: auto;
+  }
+  .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+}
+
+.notification-dropdown {
+  right: 0;
+  left: initial !important;
+  top: 42px;
+  border: 0;
+  width: 320px;
+
+  @include breakpoint(ipadLandscape) {
+    top: 30px;
+    width: 200px;
+    @include padding(0, 0, 10px, 0);
+  }
+  &__group {
+    height: 360px;
+    overflow-y: auto;
+    @include padding(0, 10px, 0, 0);
+    @include scrollbars(3px, $secondary-color, transparent);
+
+    @include breakpoint(ipadLandscape) {
+      height: 200px;
+    }
+  }
+  &__item {
+    @include margin(0, 0, 5px, 0);
+    @include padding(0, 0, 0, 0);
+  }
+  &__figure-holder {
+    width: 45px;
+    height: 45px;
+    @include margin(0, 10px, 0, 0);
+    @include flex-center;
+    position: relative;
+    img {
+      @include border-radius(50%);
+      width: 100%;
+    }
+    .status-online{
+      position: absolute;
+      right: 0;
+      bottom: 5px;
+      @include border-radius(50%);
+      width: 12px;
+      height:12px;
+      background: lightseagreen;
+      border: 2px solid $white-color;
+      display: block;
+    }
+  }
+  &__caption {
+    @include flex-column;
+    width: 80%;
+  }
+  &__link {
+    @include padding(10px, 10px, 10px, 10px);
+    @include border-radius(4px);
+    @include flex-center-vert;
+
+    &:hover {
+      color: $brand-color;
+      background-color: $secondary-color;
+    }
+  }
+  &__title {
+    @include margin(0, 0, 0, 0);
+    color: $dark-grey-color;
+    @include font-size(14px);
+    @include text-shorten;
+
+    @include breakpoint(lp) {
+      @include font-size(13px);
+    }
+
+    @include breakpoint(ipadLandscape) {
+      @include font-size(12px);
+    }
+  }
+  &__date {
+    color: $light-grey-color;
+    @include font-size(12px);
+
+    @include breakpoint(ipadLandscape) {
+      @include font-size(10px);
+    }
+  }
+}

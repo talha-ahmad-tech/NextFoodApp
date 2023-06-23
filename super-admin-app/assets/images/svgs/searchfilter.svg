@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="102.71" height="134.982" viewBox="0 0 102.71 134.982">
+  <g id="Group_9935" data-name="Group 9935" transform="translate(2 2)" opacity="0.5">
+    <circle id="Ellipse_644" data-name="Ellipse 644" cx="32.5" cy="32.5" r="32.5" transform="translate(35.71 67.982)" fill="#fff"/>
+    <path id="Path_64254" data-name="Path 64254" d="M508.092,372.225a2.115,2.115,0,0,1-1.58-.677l-11.555-11.555a15.546,15.546,0,0,1-9.433,3.2,15.956,15.956,0,1,1,12.593-6.363l11.555,11.555a2.235,2.235,0,0,1-1.58,3.837Zm-22.568-36.108A11.3,11.3,0,1,0,496.809,347.4,11.287,11.287,0,0,0,485.524,336.117Z" transform="translate(-423.434 -252.243)" fill="#658cc5"/>
+    <g id="Group_9936" data-name="Group 9936">
+      <line id="Line_839" data-name="Line 839" x1="25.715" fill="none" stroke="#658cc5" stroke-linecap="round" stroke-width="4"/>
+      <line id="Line_840" data-name="Line 840" x1="25.715" transform="translate(11.384 15)" fill="none" stroke="#658cc5" stroke-linecap="round" stroke-width="4"/>
+      <line id="Line_841" data-name="Line 841" x1="25.715" transform="translate(31.356 27.854)" fill="none" stroke="#658cc5" stroke-linecap="round" stroke-width="4"/>
+      <line id="Line_842" data-name="Line 842" x1="25.715" transform="translate(31.356 42.261)" fill="none" stroke="#658cc5" stroke-linecap="round" stroke-width="4"/>
+      <line id="Line_843" data-name="Line 843" x1="25.715" transform="translate(11.384 56.668)" fill="none" stroke="#658cc5" stroke-linecap="round" stroke-width="4"/>
+      <line id="Line_844" data-name="Line 844" x1="25.715" transform="translate(11.384 70.482)" fill="none" stroke="#658cc5" stroke-linecap="round" stroke-width="4"/>
+      <line id="Line_845" data-name="Line 845" x1="25.715" transform="translate(0 85.482)" fill="none" stroke="#658cc5" stroke-linecap="round" stroke-width="4"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,31 @@
+import { createApi } from '@reduxjs/toolkit/dist/query/react';
+import { baseQuery } from '../baseQuery';
+const ApiPrefix = '/api/services/app/';
+
+export const {{titleCase name}}Apis = {
+  {{titleCase name}}Listing: ApiPrefix + '{{titleCase name}}Service/Get',
+  {{titleCase name}}Details: ApiPrefix + '{{titleCase name}}Service/GetById',
+  Create{{titleCase name}}: ApiPrefix + '{{titleCase name}}Service/Create',
+  Update{{titleCase name}}: ApiPrefix + '{{titleCase name}}Service/Update',
+  {{titleCase name}}TaxGroup: ApiPrefix + 'ProductService/GetTaxGroup',
+  {{titleCase name}}ItemGroup: ApiPrefix + 'ItemGroupService/Get',
+  {{titleCase name}}SequenceNo: ApiPrefix + '{{titleCase name}}Service/GetNumberSeries',
+};
+
+export const {{camelCase name}}Api = createApi({
+  baseQuery: baseQuery,
+  reducerPath: '{{camelCase name}}/api',
+  endpoints: build => ({
+    fetch{{titleCase name}}: build.query<any, any>({
+      query: (params: any) => {
+        return {
+          url: {{titleCase name}}Apis.{{titleCase name}}Listing,
+          method: 'GET',
+          // params: AgGridFitlersUtils(params.request)
+        };
+      },
+    }),
+  }),
+});
+
+export const { useLazyFetch{{titleCase name}}Query } = {{camelCase name}}Api;

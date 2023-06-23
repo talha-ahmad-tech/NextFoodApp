@@ -1,0 +1,28 @@
+@import "../../assets/scss/layout", "../../assets/scss/variables", "../../assets/scss/mixins";
+.statstabswrapper{
+    .custom-border-radius{
+        border-radius: 15px;
+        border:1px solid $secondary-hover-color;
+    }
+    p{
+        color:#a1a1a1!important;
+        padding-bottom: 5px;
+    }
+    h6{
+        font-weight: 700;
+    }
+    .col{
+        @include breakpoint(md){
+            max-width: 33.33%;
+            flex:0 0 33.33%;
+        }
+        @include breakpoint(sm){
+            max-width: 50%;
+            flex:50%;
+        }
+        @include breakpoint(xs){
+            max-width: 100%;
+            flex:100%;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+import React, { useState } from 'react';
+import GeneralView from '@fridayfood/shared/components/GeneralView';
+import { useRouter } from 'next/router';
+import { tabsConfiguration } from '../config';
+import { {{constantCase name}}_DETAILS } from '../types';
+
+const {{titleCase name}}View = ({ {{camelCase name}}Details }: { {{camelCase name}}Details: {{constantCase name}}_DETAILS }) => {
+  const router = useRouter();
+  const [activeTab, setActiveTab] = useState('general');
+
+  const customData = {
+    ...{{camelCase name}}Details,
+    activeTab,
+  };
+  const tabsData = tabsConfiguration(customData ?? {});
+
+  const onEdit = () => {
+    router.push(`/{{camelCase name}}/edit/${ {{camelCase name}}Details?.id}`);
+  };
+
+  return (
+    <GeneralView
+      loading={false}
+      headerData={tabsData}
+      title="All {{titleCase name}}"
+      getActiveTab={(tab: {id: string}) => setActiveTab(tab.id)}
+      id={ {{camelCase name}}Details?.code}
+      onClick={onEdit}
+    />
+  );
+};
+
+export default {{titleCase name}}View;

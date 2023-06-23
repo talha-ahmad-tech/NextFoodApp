@@ -1,0 +1,23 @@
+@import "../../assets/style.scss";
+
+.chat-button-wrapper{
+    @include custom-fixed-position(fixed !important,unset,64px,unset,40px);
+    @include width(37px);
+    @include height(37px);
+    @include border-radius(50%);
+    @include border(1px,solid,$brand-color);
+    position: relative;
+    @include background($white-color);
+    box-shadow: 3px 3px 6px 3px rgba(101,140,197,0.2);
+    svg{
+        @include width(16px);
+    }
+    .dot{
+        @include custom-fixed-position(absolute,0,unset,unset,2px);
+        @include width(7px);
+        @include height(7px);
+        @include border-radius(50%);
+        @include background($red-color);
+        @include border(2px,solid,$white-color);
+    }
+}

@@ -1,0 +1,277 @@
+@import "../../assets/scss/layout", "../../assets/scss/variables", "../../assets/scss/mixins";
+
+@mixin navbar-shadow() {
+    @include box-shadow(0, 3px, 6px, black(0.1));
+}
+
+.friday-navbar {
+    background: $brand-color;
+    position: fixed !important;
+    height: 60px;
+    width: 100%;
+    z-index: 1001;
+    top: 0;
+    width:calc(100% - 64px);
+    @include breakpoint(sm){
+        width: 100%;
+    }
+    // @include breakpoint(lp) {
+    //     height: 52px;
+    // }
+
+    // @include breakpoint(ipadLandscape) {
+    //     height: 40px;
+    // }
+
+    @include navbar-shadow();
+    @include padding(13px !important, 0, 13px !important, 0 );
+
+    .friday-logo-holder {
+        @include flex-center;
+        @include margin(0, 30px, 0, 0);
+
+        @include breakpoint(lp) {
+            @include margin(0, 20px, 0, 0);
+        }
+
+        @include breakpoint(ipadLandscape) {
+            @include margin(0, 10px, 0, 0);
+        }
+
+        .friday-logo {
+            display: block;
+        }
+    }
+
+    .nav-item {
+        @include margin(0, 0, 0, 0);
+
+        .nav-link {
+            @include background(transparent);
+            @include same-padding(0);
+            width: 32px;
+            height: 32px;
+            text-align: center;
+            position: relative;
+            color: $white-color !important;
+            @include flex-center;
+            @include border-radius(5px);
+            @include transition();
+
+            // @include breakpoint(ipadLandscape) {
+            //     width: 24px;
+            //     height: 24px;
+            // }
+            span{
+                width: 15px;
+                height: 15px;
+            }
+
+            &:active {
+                background: white(0.6);
+            }
+
+            &:hover {
+                background: white(0.3);
+            }
+            .number-wrapper{
+                padding: 2px;
+                background-color: $brand-color;
+                @include width(20px);
+                @include height(20px);
+                @include custom-fixed-position(absolute,-4px,unset,unset,-4px);
+                @include border-radius(50%);
+                @include breakpoint(ipadLandscape){
+                    @include width(15px);
+                    @include height(15px); 
+                }
+            }
+            .number {
+                background: $red-color;
+                color: $white-color;
+                border: 1px solid transparent;
+                @include flex-center();
+                @include font-size(10px);
+                @include border-radius(50%);
+                font-family: $font-secondary;
+                text-align: center;
+                @include breakpoint(ipadLandscape) {
+                    line-height: 12px;
+                    width: 12px;
+                    height: 12px;
+                    @include font-size(7px);
+                }
+            }
+
+            .user-avatar-holder {
+                /*  width: 30px;
+        height: 30px;
+        overflow: hidden; */
+                @include border-radius(50%);
+
+                img {
+                    width: 35px;
+                    height: 35px;
+                    @include border-radius(50%);
+                }
+            }
+        }
+        &.mobile-only{
+            display: none;
+            @include breakpoint(sm){
+                display: inline-block;
+            }
+        }
+    }
+
+    .no-toggle-arrow {
+        &:after {
+            background: none;
+            border: 0;
+            @include margin(0, 0, 0, 0);
+        }
+    }
+}
+.active-sidebar{
+    .friday-navbar{
+        width: calc(100% - 277px);
+        @include breakpoint(sm){
+            width: 100%;
+        }
+    }
+}
+.friday-navbar .nav-item:not(:last-child) {
+    @include margin(0, 0, 0, 0);
+}
+
+.main-search-container {
+    position: relative;
+    @include min-width(640px);
+    @include breakpoint(lp){
+        @include min-width(430px);   
+    }
+    @include breakpoint(ipadLandscape){
+        @include min-width(340px);   
+    }
+    @include breakpoint(sm){
+        position: fixed;
+        left: 0;
+        top: 0;
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+        background-color: $brand-color;
+        z-index: 1000;
+        @include flex-start;
+    }
+    .d-flex{
+        position: relative;
+        @include breakpoint(sm){
+            width: 100%;
+        }
+    }
+    
+    &.desktop-view{
+        @include breakpoint(sm){
+            display: none;
+        }
+    }
+    .search-icon {
+        // background: url(../../assets/images/search-icon.svg) no-repeat center;
+        position: absolute;
+        right: 12px;
+        top: 47%;
+        transform:translateY(-50%);
+        display: block;
+        width: 22px;
+        height: 22px;
+        @include opacity(0.4);
+        svg{
+            @include breakpoint(ipadLandscape) {
+            @include width(16px !important);
+            @include height(16px !important);
+            }
+    }
+
+    }
+
+    .search-input-control {
+        @include background(transparent);
+        @include height(36px);
+        @include width(100%);
+        color: white(0.4);
+        @include border-radius(50px);
+        @include font-size(16px);
+        @include padding(0, 34px, 0, 12px);
+        @include transition();
+        @include border(1px,solid,rgba($white-color,0.4) !important);
+        @include input-placeholder {
+            color: white(0.4);
+        }
+        @include breakpoint(ipadLandscape) {
+            @include height(30px);
+            @include font-size(13px);
+            @include padding(0, 30px, 0, 10px);
+        }
+        &:focus {
+            color: $brand-light-clr;
+            background-color: $white-color;
+            // @include border(1px,solid,$white-color !important);
+            &::placeholder{
+                color:  $brand-light-clr;
+            }
+            +.search-icon {
+                color: $brand-light-clr;
+                @include opacity(1);
+                svg{
+                    path{
+                        fill: $brand-light-clr;
+                    }
+                }
+            }
+
+            // background: white(0.3);
+        }
+    }
+}
+.closed-sidebar{
+   
+    .main-search-container {
+        @include breakpoint(sm){
+            @include min-width(340px);   
+        }
+    }
+}
+.active-sidebar{
+    .main-search-container {
+        @include breakpoint(md){
+            @include min-width(200px);   
+        }
+    }
+}
+.mobile-search-cross{
+    display: none;
+    // color:rgba($white-color,0.4);
+    color:$white-color;  
+    margin-top: 3px;
+    margin-left: 15px;
+    span{
+     font-size: 26px;
+     }
+    @include breakpoint(sm){
+        display: inline-block;
+        
+    }
+}
+
+.toggle-menu-mobile{
+    margin-right: 20px;
+    display: none;
+    @include breakpoint(sm){
+        display: inline-block;
+    }
+    svg{
+        color:$white-color;
+        fill:$white-color;
+    }
+}

@@ -1,0 +1,43 @@
+@import "../../assets/scss/layout", "../../assets/scss/variables", "../../assets/scss/mixins";
+
+.card-table {
+    padding: 15px 20px !important;
+    
+    // max-width: 250px;
+}
+.custom-responsive-table{
+    @include breakpoint(sm){
+        overflow-y: scroll;
+    }
+    .custom-table{
+   
+        @include breakpoint(sm){
+            min-width: 500px;
+        }
+        th{
+            @include breakpoint(ipadLandscape){
+                max-width: 100px;
+                @include font-size(12px);
+                word-break: break-all;
+            }
+            @include breakpoint(sm){
+                max-width: 100px;
+                @include font-size(12px);
+                word-break: break-all;
+            } 
+        }
+        td{
+            max-width: 250px;
+            @include breakpoint(ipadLandscape){
+                max-width: 100px;
+                @include font-size(12px);
+                word-break: break-all;
+            }
+            @include breakpoint(sm){
+                max-width: 100px;
+                @include font-size(12px);
+                word-break: break-all;
+            }
+        }
+    }
+}

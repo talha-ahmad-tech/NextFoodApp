@@ -1,0 +1,9 @@
+.global-no-padding{
+  @include padding(0, 0, 0, 0);
+}
+.global-padding-1{
+  @include padding(1rem, 1rem, 1rem, 1rem);
+}
+.global-padding-2{
+  @include padding(2rem, 2rem, 2rem, 2rem);
+}

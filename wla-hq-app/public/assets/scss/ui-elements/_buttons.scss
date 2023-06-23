@@ -1,0 +1,407 @@
+@mixin button-shadow() {
+  @include box-shadow(0, 1px, 2px, black(0.2));
+}
+@mixin button-hover() {
+  @include box-shadow(0, 5px, 10px, black(0.1));
+  @include transform(translateY(-2px));
+}
+
+.friday-buttons-container {
+  @include flex-center-vert;
+}
+.friday-buttons-container .friday-btn:not(:first-child) {
+  @include margin(0, 0, 0, 10px);
+}
+
+.friday-btn {
+  @include border-radius(50px);
+  @include transition();
+  @include margin(0, 0, 0, 0);
+  @include flex-center-vert;
+  text-transform: capitalize;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  .btn-icon {
+    @include margin(0, 12px, 0, 0);
+  }
+
+  @include breakpoint(ipadLandscape) {
+    font-weight: 400;
+  }
+}
+.friday-btn-lg {
+  @include padding(12px, 32px, 12px, 32px);
+  @include font-size(16px);
+
+  @include breakpoint(ipadLandscape) {
+    @include font-size(13px);
+  }
+  .btn-icon {
+    @include font-size(24px);
+  }
+}
+.friday-btn-md {
+  @include padding(8px, 8px, 8px, 8px);
+  @include font-size(14px);
+  // @include breakpoint(ipadLandscape) {
+  //   @include padding(5px, 20px, 5px, 20px);
+  //   @include font-size(12px);
+  // }
+
+  .btn-icon {
+    @include font-size(20px);
+  }
+}
+.friday-btn-sm {
+  @include padding(6px, 18px, 6px, 18px);
+  @include font-size(13px);
+
+  @include breakpoint(ipadLandscape) {
+    @include font-size(10px);
+  }
+
+  .btn-icon {
+    @include font-size(16px);
+  }
+}
+
+/* primary */
+.friday-btn-primary {
+  background: $brand-color;
+  color: $white-color;
+  border-radius: 5px;
+  @include flex-center;
+  min-height: 32px;
+  min-width: 70px;
+  span {
+    background-color: $white-color;
+    width: 13px;
+    min-width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    margin-right: 4px;
+    @include flex-center;
+    svg {
+      width: 10px !important;
+    }
+  }
+  &:hover {
+    background: $brand-hover-color;
+    color: $white-color;
+  }
+  &:active {
+    background: $brand-active-color;
+  }
+  &.small-btn {
+    @include border-radius(6px);
+    @include padding(4px, 10px, 4px, 10px);
+    @include font-size(14px);
+    font-family: $font-tertiary;
+  }
+  &.outline-btn {
+    background: transparent;
+    color: $brand-color;
+    border: 1px solid $brand-color;
+    padding: 0 10px;
+    // &:hover {
+    //   background: $brand-color;
+    //   color: $white-color;
+    //   border: 1px solid transparent;
+    // }
+    &.active-btn {
+      background: $brand-color;
+      color: $white-color;
+      border: 1px solid transparent;
+    }
+  }
+}
+
+/* secondary */
+.friday-btn-secondary {
+  background: $secondary-color;
+  color: $second-grey-color;
+  &:hover {
+    background: $secondary-hover-color;
+    color: $second-grey-color;
+  }
+  &:active {
+    background: $secondary-active-color;
+  }
+}
+
+/* highlight */
+.friday-btn-highlight {
+  background: $secondary-color;
+  color: $brand-hover-color;
+  font-weight: 700;
+  &:hover {
+    background: $secondary-hover-color;
+    color: $brand-hover-color;
+  }
+  &:active {
+    background: $secondary-active-color;
+  }
+}
+
+/* delete */
+.friday-btn-delete {
+  background: $delete-color;
+  color: $white-color;
+  &:hover {
+    background: $delete-hover-color;
+    color: $white-color;
+  }
+  &:active {
+    background: $delete-active-color;
+  }
+}
+
+/* outline primary */
+.friday-btn-outline-primary {
+  border: 2px solid $brand-color;
+  color: $brand-color;
+  background: none;
+  &:hover {
+    background: $brand-color;
+    color: $white-color;
+  }
+  &:active {
+    background: $brand-active-color;
+  }
+}
+
+/* outline Secondary */
+.friday-btn-outline-secondary {
+  border: 2px solid $secondary-color;
+  color: $second-grey-color;
+  background: none;
+  &:hover {
+    background: $secondary-hover-color;
+    color: $second-grey-color;
+  }
+  &:active {
+    background: $secondary-active-color;
+  }
+}
+
+/* outline white */
+.friday-btn-outline-white {
+  border: 2px solid $white-color;
+  color: $white-color;
+  background: none;
+  &:hover {
+    background: $white-color;
+    color: $brand-color;
+  }
+}
+
+.friday-btn-text-white {
+  color: $white-color;
+  &:hover {
+    background: $white-color;
+    color: $brand-color;
+  }
+}
+
+.friday-btn-text-primary {
+  color: $brand-color;
+  &:hover {
+    background: $white-color;
+    color: $brand-color;
+  }
+}
+
+.friday-btn-text-grey {
+  color: $dark-grey-color;
+  &:hover {
+    background: $white-color;
+    color: $brand-color;
+  }
+}
+
+.custom-btn-primary {
+  background-color: $brand-color;
+  color: $white-color;
+  min-width: 72px;
+  text-align: center;
+  border: 1px solid transparent;
+  @include font-size(15px);
+  @include border-radius(30px);
+  @include padding(6px, 20px, 6px, 20px);
+  @include breakpoint(md) {
+    @include font-size(12px);
+    @include padding(6px, 14px, 6px, 14px);
+  }
+  &:hover {
+    background: $brand-hover-color;
+    cursor: pointer;
+  }
+}
+.custom-btn-secondary {
+  font-family: $font-tertiary;
+  background-color: transparent;
+  color: $black-color;
+  min-width: 72px;
+  border: 1px solid $black-color;
+  @include border-radius(30px);
+  @include font-size(15px);
+  @include border-radius(30px);
+  @include padding(6px, 20px, 6px, 20px);
+  @include breakpoint(md) {
+    @include font-size(12px);
+    @include padding(6px, 14px, 6px, 14px);
+  }
+  &:hover {
+    background: $secondary-hover-color;
+    border-color: transparent;
+  }
+}
+
+.custom-link-button {
+  text-align: left;
+  @include font-size(15px);
+  @include border-top(1px, solid, $dark-grey-new-clr);
+  @include flex-start();
+  align-items: center;
+  @include padding(6px, 14px, 6px, 14px);
+  @include width(100%);
+  @include height(56px);
+  span {
+    @include margin(0, 14px, 0, 0);
+    i {
+      color: $brand-color;
+    }
+  }
+  &:hover {
+    @include background($blue-scondary-clr);
+  }
+}
+
+.custom-button-transparent {
+  text-align: left;
+  @include flex-start();
+  align-items: center;
+  @include font-size(16px);
+  @include padding(6px, 14px, 6px, 14px);
+  @include border-radius(5px);
+  @include width(100%);
+  @include height(56px);
+  font-family: $font-tertiary;
+  span {
+    i {
+      color: $brand-color;
+    }
+    &.text-hidden {
+      @include margin(0, 0, 0, 10px);
+      overflow: hidden;
+      text-align: left;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+  &.active-tab {
+    @include background($blue-scondary-clr);
+  }
+  &:hover {
+    @include background($blue-scondary-clr);
+  }
+}
+
+.custom-round-btn {
+  @include min-width(13px);
+  @include width(13px);
+  @include height(13px);
+  @include border-radius(50%);
+  background-color: $brand-color;
+  @include flex-center();
+  @include width(100%);
+  @include font-weight(600);
+}
+
+.sub-menu-items {
+  text-align: left;
+  @include font-size(15px);
+  @include padding(6px, 12px, 6px, 60px);
+  @include border-radius(5px);
+  @include width(100%);
+  @include font-weight(400);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  @include height(56px);
+  &:hover {
+    @include background($blue-scondary-clr);
+  }
+}
+
+.custom-btn-primary-new {
+  @include border-radius(5px);
+  @include background($blue-scondary-clr);
+  font-family: $font-tertiary;
+  @include min-width(72px);
+  text-align: center;
+  @include font-size(15px);
+  @include border-radius(5px);
+  @include padding(6px, 20px, 6px, 20px);
+  @include breakpoint(md) {
+    @include font-size(12px);
+    @include padding(6px, 14px, 6px, 14px);
+  }
+}
+.custom-btn-secondary-new {
+  @include border-radius(5px);
+  @include font-size(14px);
+  @include background($brand-color);
+  @include color($white-color);
+  font-family: $font-tertiary;
+  @include min-width(116px);
+  @include padding(6px, 20px, 6px, 20px);
+  @include breakpoint(md) {
+    @include font-size(12px);
+    @include padding(6px, 14px, 6px, 14px);
+  }
+  text-align: center;
+}
+
+.custom-grey-outline-btn {
+  @include border(1px, solid, $new-dark-grey-color);
+  @include border-radius(6px);
+  @include padding(5px, 10px, 5px, 10px);
+  @include font-size(13px);
+  @include color($black-color);
+  @include flex-center;
+  &:hover {
+    @include border(1px, solid, $black-color);
+    svg {
+      path {
+        fill: $black-color;
+      }
+    }
+  }
+  + .customdropdown-body {
+    top: 42px !important;
+  }
+
+  &.no-icon {
+    button {
+      // @include flex-between;
+      .no-item {
+        display: none;
+      }
+    }
+  }
+}
+.no-item {
+  margin-left: 15px;
+}
+.disbaled-grey-outline-btn {
+  @include border(1px, solid, $new-dark-grey-color);
+  @include color($new-dark-grey-color);
+  &:hover {
+    @include border(1px, solid, $new-dark-grey-color);
+  }
+}
+
+.border-round {
+  border-radius: 5px !important;
+}

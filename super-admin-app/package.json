@@ -1,0 +1,17 @@
+{
+  "name": "@fridayfood/super-admin-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next lint && next dev -p 4200",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fridayfood/shared": "0.1.0",
+    "@fridayfood/ui-toolkit": "0.1.0",
+    "@types/node": "18.14.6",
+    "@types/react": "18.0.28"
+  }
+}

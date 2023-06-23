@@ -1,0 +1,45 @@
+.friday-page-header {
+  @include padding(20px, 0, 20px, 0);
+
+  @include breakpoint(lp) {
+    @include padding(15px, 0, 15px, 0);
+  }
+  @include breakpoint(ipadLandscape) {
+    @include padding(10px, 0, 10px, 0);
+  }
+
+  &__body {
+      @include flex-between;
+  }
+  &__title {
+    font-weight: 700;
+    line-height: 30px;
+    @include margin(0, 0, 0, 0);
+    @include font-size(24px);
+    color:$second-grey-color;
+    font-family: $font-primary  !important;
+
+    @include breakpoint(lp) {
+      @include font-size(18px);
+    }
+
+    @include breakpoint(ipadLandscape) {
+      @include font-size(14px);
+    }
+
+  }
+  &__sub-title {
+    color: #3a4953;
+    @include font-size(16px);
+    @include margin(0, 0, 0, 0);
+    font-family: $font-primary  !important;
+    @include breakpoint(lp) {
+      @include font-size(13px);
+    }
+
+    @include breakpoint(ipadLandscape) {
+      @include font-size(11px);
+    }
+
+  }
+}

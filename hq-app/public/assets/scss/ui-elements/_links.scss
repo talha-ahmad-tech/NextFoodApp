@@ -1,0 +1,50 @@
+.friday-links-container {
+  display: flex;
+  @include margin(0, 0, 15px, 0);
+}
+
+%friday-link {
+  font-weight: 700;
+  text-transform: capitalize;
+  @include padding(6px, 18px, 6px, 18px);
+  @include font-size(14px);
+  @include border-radius(50px);
+  @include flex-center-vert;
+
+
+  @include breakpoint(ipadLandscape) {
+    @include font-size(12px);
+  }
+
+
+  .link-icon {
+    @include margin(0, 5px, 0, 0);
+    @include font-size(16px);
+  }
+}
+.friday-link-primary {
+  @extend %friday-link;
+  color: $brand-color;
+  &:hover {
+    background: $brand-hover-color;
+    color: $white-color;
+  }
+  &:active {
+    background: $brand-active-color;
+  }
+}
+.friday-link-secondary {
+  @extend %friday-link;
+  color: $dark-grey-color;
+  &:hover {
+    background: $secondary-hover-color;
+    color: $dark-grey-color;
+  }
+  &:active {
+    background: $secondary-active-color;
+  }
+}
+.friday-link-white {
+  @extend %friday-link;
+  color: $white-color;
+}

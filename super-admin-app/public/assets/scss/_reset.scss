@@ -1,0 +1,182 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  outline: none !important;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure {
+  margin: 0px;
+  padding: 0px;
+}
+h2 {
+  font-size: 28px;
+}
+h3 {
+  font-size: 24px;
+}
+h5 {
+  font-size: 20px;
+}
+h6 {
+  font-size: 18px;
+}
+p {
+  font-size: 16px;
+  line-height: initial;
+}
+.custom-p-16 {
+  font-size: 16px;
+}
+.custom-p-13 {
+  font-size: 13px;
+}
+.custom-p-14 {
+  font-size: 14px;
+}
+.custom-p-12 {
+  font-size: 12px;
+}
+.custom-p-11 {
+  font-size: 11px;
+}
+.custom-p-10 {
+  font-size: 10px;
+}
+.brand-color {
+  color: $brand-color;
+}
+.bg-grey {
+  background-color: $grey-clr;
+}
+.orange-text {
+  color: $orange-clr;
+}
+.bg-orange-clr {
+  background-color: $orange-clr;
+  color: $white-color;
+}
+.font-medium {
+  font-family: $font-tertiary;
+}
+.light-blue-clr {
+  color: $brand-light-clr;
+}
+.custom-flex-between {
+  @include flex-between;
+  &.mobile-col-resp {
+    @include breakpoint(md) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+.custom-flex-start {
+  @include flex-start;
+}
+.grey-text {
+  color: $new-dark-grey-color;
+}
+.dark-grey-clr {
+  color: $new-grey-clr;
+}
+.font-bold {
+  font-family: $sf-pro-bold;
+}
+.font-viewTitle {
+  font-family: $sf-pro-bold;
+  text-transform: capitalize;
+}
+.font-semibold {
+  font-family: $sf-pro-semibold;
+}
+ol,
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  li {
+    list-style-type: none;
+
+    a {
+      @include transition();
+    }
+  }
+}
+a {
+  text-decoration: none !important;
+  outline: none !important;
+  @include transition();
+  color: $brand-color;
+}
+
+button {
+  outline: none !important;
+  cursor: pointer;
+  background: none;
+  text-decoration: none !important;
+  @include transition();
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+a img {
+  border: 0;
+  padding: 0;
+  @include transition();
+}
+img {
+  border: 0;
+  padding: 0;
+  @include transition();
+}
+
+label {
+  font-weight: normal;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-animation: autofill 0s forwards;
+  animation: autofill 0s forwards;
+}
+
+@-webkit-keyframes autofill {
+  100% {
+    background: transparent;
+    color: inherit;
+  }
+}
+.section-wrapper {
+  @include padding(28px, 0, 28px, 0);
+}
+
+/* clears the ‘X’ from Chrome */
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  display: none;
+}
+
+.border-left-1 {
+  @include border-left(1px, solid, $new-dark-grey-color);
+}
+.border-top-1 {
+  @include border-top(1px, solid, $new-dark-grey-color);
+}

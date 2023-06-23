@@ -1,0 +1,158 @@
+@import "../../assets/scss/_layout.scss", "../../assets/scss/_variables.scss",
+  "../../assets/scss/_mixins.scss";
+
+.custom-sidebar {
+  @include width(277px);
+  @include height(100%);
+  @include padding(0, 0, 45px, 0);
+  @include background($white-color);
+  @include custom-fixed-position(fixed, 0, 0, 0, unset);
+  @include custom-overflow-y(overlay);
+  @include scrollbars(3px, $brand-color, $grey-clr);
+  box-shadow: 0px 0px 10px 0px rgba(213, 213, 213, 0.75);
+  z-index: 999;
+  transition: width 257ms ease 0s, padding 257ms ease 0s;
+  @include breakpoint(sm){
+    display: none;
+  }
+  .grey-clr-text {
+    color: #A0A4A7;
+  }
+  .profile-img {
+    width: 36px;
+    height: 36px;
+    border-radius: 5px;
+  }
+  .custom-ul-wrapper {
+    .custom-ul-wrapper-main {
+      @include padding(40px, 0, 40px, 0);
+      .custom-button-transparent {
+        padding-left: 0;
+        border-radius: 0 !important;
+        span {
+          margin: 0;
+          &:nth-child(1) {
+            min-width: 60px;
+            max-width: 60px;
+            height: 56px;
+            @include flex-center;
+          }
+        }
+      }
+      &.custom-padding-bottom {
+        @include padding(0, 0, 40px, 0);
+        min-height: calc(100vh - 580px);
+        // @include breakpoint(lp) {
+        //   min-height: calc(100vh - 580px);
+        // }
+        // @include breakpoint(md) {
+        //   min-height: calc(100vh - 580px);
+        // }
+      }
+      &.active-tab {
+        @include background($blue-scondary-clr);
+      }
+      &.secondary-ul {
+        @include border-top(1px, solid, $dark-grey-new-clr);
+        .custom-shortcuts-wrap {
+          @include flex-between();
+          @include font-size(15px);
+          padding-right: 38px;
+          // @include same-padding(14px);
+
+          .left-shortcuts {
+            @include flex-start();
+            font-family: $font-tertiary;
+            align-items: center;
+            span {
+              &:nth-child(1) {
+                min-width: 60px;
+                max-width: 60px;
+                height: 56px;
+                @include flex-center;
+              }
+            }
+          }
+          .child-menus {
+            @include padding(0, 0, 0, 0);
+          }
+        }
+      }
+    }
+    .custom-button-transparent {
+      color: $black-color;
+    }
+  }
+  .sidebar-collapse-menu-button {
+    @include width(258px);
+    @include custom-fixed-position(fixed, unset, 0, 0, unset);
+    @include flex-end();
+    @include padding(14px, 0, 14px, 0);
+    @include background(transparent);
+    transition: width 238ms ease 0s;
+    i {
+      color: $icons-button-clr;
+    }
+    .collapse-btn {
+      width: 32px;
+      height: 32px;
+      @include padding(0, 0, 0, 0);
+      border-radius: 5px;
+      background-color: $white-color;
+      &:hover {
+        background-color: $blue-scondary-clr;
+      }
+    }
+  }
+  &.close-sidebar {
+    @include width(60px);
+    @include padding(0, 0, 45px, 0);
+    transition: width 70ms ease 0s;
+    @include breakpoint(sm){
+      display: block;
+      @include width(277px);
+      z-index: 10001;
+  }
+    .custom-button-transparent {
+      padding: 0;
+      margin: 0;
+    }
+
+    .custom-dropdown-container-wrapper {
+      box-shadow: none;
+      &.active {
+        .custom-dropdown-body {
+          display: none;
+        }
+      }
+    }
+    .sidebar-collapse-menu-button {
+      justify-content: center;
+      @include width(61px);
+      transition: width 61ms ease 0s;
+      @include breakpoint(sm){
+        @include width(258px);
+        @include custom-fixed-position(fixed, unset, 0, 0, unset);
+        @include flex-end();
+        @include padding(14px, 0, 14px, 0);
+        @include background(transparent);
+        transition: width 238ms ease 0s;
+      }
+      .collapse-btn {
+        i {
+          &::before {
+            content: "\f101";
+            @include breakpoint(sm){
+              content: "\f100";
+            }
+          }
+        }
+      }
+    }
+  }
+  &.mobile-sidebar-show{
+    @include breakpoint(sm){
+      display: block;
+    }
+  }
+}

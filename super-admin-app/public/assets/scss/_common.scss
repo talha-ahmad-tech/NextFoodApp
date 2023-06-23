@@ -1,0 +1,66 @@
+@import "./layout","./mixins","./reset","./variables";
+
+.header-with-buttons {
+    @include flex-start;
+    &.content-end{
+      justify-content: space-between;
+    }
+    .custom-flex-start {
+      @include flex-start;
+      .header-btns-wrapper {
+        @include flex-start;
+        margin-left: 10px;
+        > div {
+          margin: 0 10px;
+        }
+        > button {
+          margin: 0 10px;
+        }
+      }
+    }
+    .header-btns-wrapper {
+      @include flex-end;
+      > div {
+        margin: 0 10px;
+      }
+      > button {
+        margin: 0 10px;
+      }
+    }
+  
+    .container-fluid {
+      @include padding(0, 25px, 0, 25px !important);
+    }
+  }
+.custom-flex-col{
+  @include flex-start;
+  flex-direction: column;
+}
+.custom-btns-wrapper{
+  @include flex-end;
+  width: 100%;
+  button{
+      margin: 0 10px;
+  }
+}
+
+.custom-padding-x{
+  @include padding(0,7px,0,7px);
+}
+
+
+
+::-webkit-scrollbar {
+  width: 10px !important;
+  height: 10px !important;
+}
+::-webkit-scrollbar-track {
+  background: transparent !important; 
+}
+::-webkit-scrollbar-thumb {
+  background: #DCE7EE !important; 
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #BECDDB !important; 
+}

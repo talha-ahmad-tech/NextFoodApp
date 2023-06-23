@@ -1,0 +1,25 @@
+import { createSlice } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
+
+import { {{constantCase name}}_DETAILS } from './types';
+
+export interface IState {
+  {{camelCase name}}: Array<object>;
+}
+
+const initialState: IState = {
+  {{camelCase name}}: [],
+};
+
+const {{camelCase name}}Slice = createSlice({
+  name: "{{camelCase name}}",
+  initialState,
+  reducers: {
+    set{{titleCase name}}: (state: IState, action: PayloadAction<{{constantCase name}}_DETAILS>) => {
+      state.{{camelCase name}} = [...state.{{camelCase name}} ,action.payload]
+    },
+  },
+});
+
+export const { set{{titleCase name}} } = {{camelCase name}}Slice.actions;
+export const {{camelCase name}}Reducer = {{camelCase name}}Slice.reducer;

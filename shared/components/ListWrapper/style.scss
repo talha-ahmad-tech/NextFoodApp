@@ -1,0 +1,10 @@
+@import "../../assets/style.scss";
+.list-main-wrapper{
+    @include flex-between();
+    align-items: flex-end;
+    @include border-radius(5px);
+    @include padding(10px,10px,10px,10px);
+    &:hover{
+        @include background($grey-clr);
+    }
+}

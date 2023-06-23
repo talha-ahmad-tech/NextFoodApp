@@ -1,0 +1,20 @@
+export type ADD_RECEIPT_TYPE = {
+  showStoreLogo: boolean;
+  storeLogo: string;
+  showReceiptName: boolean;
+  receiptName: string;
+  showStoreName: boolean;
+  storeName: string;
+  showDiscount: boolean;
+  showTax: boolean;
+  showPaidBy: boolean;
+  showVatNumber: boolean;
+  showTaxCalculation: boolean;
+  showCashier: boolean;
+  duplicatePrint: boolean;
+  printOnParked: boolean;
+  showStoreAddress: boolean;
+  showCity: boolean;
+  showWebAddress: boolean;
+  webAddress: string;
+};

@@ -1,0 +1,58 @@
+import * as Yup from "yup";
+import { FormFormModel } from "./formModel";
+
+const {
+  formField: {
+    code,
+    {{camelCase name}}Name,
+    itemGroupId,
+    activeFrom,
+    activeTo,
+    standardCost,
+    totalRetailPrice,
+    purchaseTaxGroupId,
+    saleTaxGroupId,
+    {{camelCase name}}Details,
+  },
+} = FormFormModel;
+
+export const validationSchema = [
+  Yup.object().shape({
+    [code.name]: Yup.string().required(`${code.requiredErrorMsg}`),
+    [{{camelCase name}}Name.name]: Yup.string().required(`${ {{camelCase name}}Name.requiredErrorMsg}`),
+    [itemGroupId.name]: Yup.string().required(
+      `${itemGroupId.requiredErrorMsg}`
+    ),
+    [activeFrom.name]: Yup.string().required(`${activeFrom.requiredErrorMsg}`),
+    [standardCost.name]: Yup.string().required(
+      `${standardCost.requiredErrorMsg}`
+    ),
+    [totalRetailPrice.name]: Yup.string().required(
+      `${totalRetailPrice.requiredErrorMsg}`
+    ),
+    [purchaseTaxGroupId.name]: Yup.string().required(
+      `${purchaseTaxGroupId.requiredErrorMsg}`
+    ),
+    [saleTaxGroupId.name]: Yup.string().required(
+      `${saleTaxGroupId.requiredErrorMsg}`
+    ),
+  }),
+  Yup.object().shape({
+    [{{camelCase name}}Details.name]: Yup.array()
+      .min(1)
+      .required(`${ {{camelCase name}}Details.requiredErrorMsg}`),
+  }),
+];
+
+export const formInitialValues = {
+  [code.name]: "",
+  [{{camelCase name}}Name.name]: "",
+  [itemGroupId.name]: "",
+  [activeFrom.name]: "",
+  [activeTo.name]: "",
+  [standardCost.name]: "",
+  [totalRetailPrice.name]: "",
+  [purchaseTaxGroupId.name]: "",
+  [saleTaxGroupId.name]: "",
+  [{{camelCase name}}Details.name]: [],
+};

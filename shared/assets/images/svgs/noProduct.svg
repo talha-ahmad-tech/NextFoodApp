@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="92.114" height="81.425" viewBox="0 0 92.114 81.425">
+  <g id="Group_9934" data-name="Group 9934" transform="translate(2 2)" opacity="0.5">
+    <line id="Line_846" data-name="Line 846" x1="64.21" transform="translate(10.79)" fill="none" stroke="#658cc5" stroke-linecap="round" stroke-width="4"/>
+    <line id="Line_849" data-name="Line 849" x1="3" fill="none" stroke="#658cc5" stroke-linecap="round" stroke-width="4"/>
+    <line id="Line_850" data-name="Line 850" x1="3" transform="translate(0 27.193)" fill="none" stroke="#658cc5" stroke-linecap="round" stroke-width="4"/>
+    <line id="Line_851" data-name="Line 851" x1="3" transform="translate(0 54.309)" fill="none" stroke="#658cc5" stroke-linecap="round" stroke-width="4"/>
+    <line id="Line_847" data-name="Line 847" x1="64.21" transform="translate(10.79 27.193)" fill="none" stroke="#658cc5" stroke-linecap="round" stroke-width="4"/>
+    <line id="Line_848" data-name="Line 848" x1="29.21" transform="translate(10.79 54.309)" fill="none" stroke="#658cc5" stroke-linecap="round" stroke-width="4"/>
+    <path id="Path_64255" data-name="Path 64255" d="M183.471,182.308a.9.9,0,0,0-1.165,1.165l9.072,23.588a.9.9,0,0,0,1.479.314l4.707-4.707a1.8,1.8,0,0,1,2.551,0l6.084,6.094s0,0,0,0a1.811,1.811,0,0,0,2.562-2.56h0l-6.095-6.084a1.8,1.8,0,0,1,0-2.551l4.707-4.707a.9.9,0,0,0-.314-1.479Zm-4.531,2.46a4.508,4.508,0,0,1,5.826-5.826l23.588,9.072a4.508,4.508,0,0,1,1.569,7.4l-3.431,3.431,4.818,4.81a5.417,5.417,0,0,1-7.66,7.662l-4.811-4.819-3.431,3.431a4.508,4.508,0,0,1-7.4-1.57Z" transform="translate(-122.781 -133.473)" fill="#658cc5" fill-rule="evenodd"/>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+.fact-pane {
+  ul {
+    li {
+      .item {
+        border: 1px solid $border-color;
+        color: $dark-grey-color;
+        @include font-size(13px);
+        @include border-radius(3px);
+        @include padding(10px, 10px, 10px, 10px);
+        @include margin(0, 0, 10px, 0);
+        font-weight: 700;
+        display: flex;
+
+        &:hover {
+          background-color: $secondary-hover-color;
+        }
+      }
+    }
+  }
+}

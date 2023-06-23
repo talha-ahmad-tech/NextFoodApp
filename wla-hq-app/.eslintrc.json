@@ -1,0 +1,21 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": [
+    "prettier",
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": [
+    "autofix"
+  ],
+  "rules": {
+    // "no-console": ["error", { "allow": ["warn", "error"] }],
+    "prefer-const": "error",
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "error",
+    "import/named": "error"
+  }
+}

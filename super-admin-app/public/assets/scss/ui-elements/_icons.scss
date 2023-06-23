@@ -1,0 +1,153 @@
+.friday-icons-container {
+  display: flex;
+}
+
+%friday-icon-btn {
+  height: 40px;
+  width: 40px;
+  @include border-radius(50%);
+  @include flex-center;
+  @include transition();
+
+  @include breakpoint(lp) {
+    height: 32px;
+    width: 32px;
+  }
+  @include breakpoint(ipadLandscape) {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+.circle-icon-primary {
+  @extend %friday-icon-btn;
+  background-color: $brand-color;
+  color: $white-color;
+
+  &:hover {
+    background: $brand-hover-color;
+    color: $white-color;
+  }
+  &:active {
+    background: $brand-active-color;
+  }
+}
+
+.circle-icon-secondary {
+  @extend %friday-icon-btn;
+  background-color: $secondary-color;
+  color: $second-grey-color;
+
+  &:hover {
+    background: $secondary-hover-color;
+    color: $second-grey-color;
+  }
+  &:active {
+    background: $secondary-active-color;
+  }
+}
+
+.circle-icon-transparent {
+  @extend %friday-icon-btn;
+  background-color: none;
+  color: $light-grey-color;
+
+  &:hover {
+    background: $secondary-hover-color;
+    color: $second-grey-color;
+  }
+  &:active {
+    background: $secondary-active-color;
+  }
+}
+
+.circle-icon-highlight {
+  @extend %friday-icon-btn;
+  background: $secondary-color;
+  color: $brand-hover-color;
+  &:hover {
+    background: $secondary-hover-color;
+    color: $brand-hover-color;
+  }
+  &:active {
+    background: $secondary-active-color;
+  }
+}
+
+.circle-icon-delete {
+  @extend %friday-icon-btn;
+  background: $delete-color;
+  color: $white-color;
+  &:hover {
+    background: $delete-hover-color;
+    color: $white-color;
+  }
+  &:active {
+    background: $delete-active-color;
+  }
+}
+
+.circle-icon-outline-primary {
+  @extend %friday-icon-btn;
+  border: 2px solid $brand-color;
+  color: $brand-color;
+  background: none;
+  &:hover {
+    background: $brand-color;
+    color: $white-color;
+  }
+  &:active {
+    background: $brand-active-color;
+  }
+}
+
+.circle-icon-outline-secondary {
+  @extend %friday-icon-btn;
+  border: 2px solid $secondary-color;
+  color: $second-grey-color;
+  background: none;
+  &:hover {
+    background: $secondary-hover-color;
+    color: $second-grey-color;
+  }
+  &:active {
+    background: $secondary-active-color;
+  }
+}
+
+.circle-icon-outline-white {
+  @extend %friday-icon-btn;
+  border: 2px solid $white-color;
+  color: $white-color;
+  background: none;
+  &:hover {
+    background: $white-color;
+    color: $brand-color;
+  }
+}
+
+.friday-icons-container .icon-wrap:not(:first-child) {
+  @include margin(0, 0, 0, 5px);
+}
+
+.material-icons {
+  @include font-size(24px);
+
+  @include breakpoint(lp) {
+    @include font-size(20px);
+  }
+  @include breakpoint(ipadLandscape) {
+    @include font-size(16px);
+  }
+}
+
+.material-icons-outlined {
+  @include font-size(24px);
+
+  @include breakpoint(lp) {
+    @include font-size(20px);
+  }
+  @include breakpoint(ipadLandscape) {
+    @include font-size(16px);
+  }
+}

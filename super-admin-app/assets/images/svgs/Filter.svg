@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="15" viewBox="0 0 21 15">
+  <g id="icon-filter-chart" transform="translate(0.5)">
+    <g id="icon-filter-chart-2" data-name="icon-filter-chart" transform="translate(-1480 -591.5)" opacity="0.5">
+      <g id="Group_10373" data-name="Group 10373">
+        <line id="Line_962" data-name="Line 962" y2="15" transform="translate(1497.5 591.5)" fill="none" stroke="#658cc5" stroke-width="1.5"/>
+        <circle id="Ellipse_738" data-name="Ellipse 738" cx="2.5" cy="2.5" r="2.5" transform="translate(1495 594)" fill="#658cc5" stroke="#fff" stroke-width="1"/>
+      </g>
+      <g id="Group_10374" data-name="Group 10374" transform="translate(1487 591.5)">
+        <line id="Line_962-2" data-name="Line 962" y1="15" transform="translate(2.5)" fill="none" stroke="#658cc5" stroke-width="1.5"/>
+        <circle id="Ellipse_738-2" data-name="Ellipse 738" cx="2.5" cy="2.5" r="2.5" transform="translate(0 7.5)" fill="#658cc5" stroke="#fff" stroke-width="1"/>
+      </g>
+      <g id="Group_10375" data-name="Group 10375" transform="translate(-15)">
+        <line id="Line_962-3" data-name="Line 962" y2="15" transform="translate(1497.5 591.5)" fill="none" stroke="#658cc5" stroke-width="1.5"/>
+        <circle id="Ellipse_738-3" data-name="Ellipse 738" cx="2.5" cy="2.5" r="2.5" transform="translate(1495 594)" fill="#658cc5" stroke="#fff" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

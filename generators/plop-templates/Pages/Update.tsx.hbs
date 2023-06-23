@@ -1,0 +1,30 @@
+import {{titleCase name}}Create from 'containers/{{titleCase name}}/Add';
+
+import { GetServerSidePropsContext } from 'next';
+import { getMethod, setDefaultHeader } from 'services/axios';
+import { {{titleCase name}}Apis } from 'services/modules/{{camelCase name}}.api';
+
+export default {{titleCase name}}Create;
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export async function getServerSideProps({
+  req,
+  params,
+}: GetServerSidePropsContext) {
+  const token = req?.cookies?.token;
+  await setDefaultHeader(token as string);
+  const response = await getMethod({
+    url: `${ {{titleCase name}}Apis.{{titleCase name}}Details}?Id=${params?.id}`,
+    baseUrl: process.env.NEXT_PUBLIC_API_URL_V2,
+  });
+
+  if (response?.status === 200) {
+    return {
+      props: { {{camelCase name}}Details: response?.data?.result, id: params?.id},
+    };
+  }
+
+  return {
+    props: { {{camelCase name}}Details: {}, id: params?.id },
+  };
+}

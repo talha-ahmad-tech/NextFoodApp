@@ -1,0 +1,61 @@
+.friday-accordion-container {
+  .accordion-item {
+    @include margin(0, 0, 15px, 0);
+  }
+
+  .accordion-header {
+    @include padding(0, 20px, 0, 0);
+    @include flex-center-vert;
+    @include padding(0, 50px, 0, 40px);
+    height: 48px;
+
+    @include breakpoint(lp) {
+      @include padding(0, 40px, 0, 20px);
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  .accordion-button {
+    border: none;
+    color: $dark-grey-color;
+    text-transform: capitalize;
+    font-weight: 700;
+    @include font-size(16px);
+    @include padding(0, 0, 0, 0);
+    &:focus {
+      box-shadow: none;
+      border: none;
+    }
+  }
+  .accordion-button:not(.collapsed) {
+    color: $dark-grey-color;
+    background: none !important;
+  }
+  .accordion-collapse {
+    border: 0;
+    border-width: 0 1px;
+  }
+  .accordion-body {
+    border-top: solid 1px $border-color;
+    @include padding(40px, 40px, 40px, 40px);
+
+    @include breakpoint(lp) {
+      @include padding(20px, 20px, 20px, 20px);
+    }
+  }
+
+  .accordion-button {
+    &:after {
+      position: relative;
+      right: -68px;
+      /* background-image: url(../../images/arrow_drop_down_black_48dp.svg); */
+      @include breakpoint(lp) {
+        right: -52px;
+      }
+    }
+  }
+}
+
+

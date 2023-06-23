@@ -1,0 +1,17 @@
+@import "../../assets/scss/_layout.scss", "../../assets/scss/_variables.scss", "../../assets/scss/_mixins.scss";
+
+
+.friday-page-header__body{
+    @include padding(0, 0 , 0 ,0);
+    .friday-page-header_inner_body{
+        @include flex-between;
+        width:100%;
+        .left-content{
+            @include flex-center-vert;
+        }
+
+    }
+    @include breakpoint(sm){
+        @include padding(0, 0 , 0 ,0);  
+    }
+}
